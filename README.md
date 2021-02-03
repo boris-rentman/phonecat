@@ -13,3 +13,16 @@ http://localhost:8000/#!/
 or http://localhost:8000/#!/phones
 
 to see the phone catalog.
+
+
+===============================
+
+Main Files to watch on
+
+===============================
+
+1. index.html 
+2. app.module.js
+3. app.config.js
+4. phone-list folder
+5. phone-detail folder
