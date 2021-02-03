@@ -1,0 +1,6 @@
+<p>people</p>
+<li ng-repeat="phone in $ctrl.phones">
+    <a ui-sref="phone({ phoneId: phone.id })">
+        {{phone.name}}
+    </a>
+</li>

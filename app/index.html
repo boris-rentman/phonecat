@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Google Phone Gallery</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="app.animations.css" />
+
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="app.animations.js"></script>
+    <script src="core/core.module.js"></script>
+    <script src="core/checkmark/checkmark.filter.js"></script>
+    <script src="core/phone/phone.module.js"></script>
+    <script src="core/phone/phone.service.js"></script>
+
+    <script src="phone-detail/phone-detail.module.js"></script>
+    <script src="phone-detail/phone-detail.component.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.29/angular-ui-router.min.js"></script>
+    <script src="hello-world/hello-world.module.js"></script>
+    <script src="phone-list/phone-list.module.js"></script>
+    <script src="phone-list/phone-list.component.js"></script>
+    <script src="core/people/people.service.js"></script>
+    <script src="core/people/people.module.js"></script>
+    <script src="core/people/people.component.js"></script>
+    <script src="core/phone/phone.service.js"></script>
+
+  </head>
+  <body ng-app="phonecatApp">
+    <div class="view-container">
+<!--//Uncomment this & copy the routes in testing.js to app.config.js
+          //to be able to see the testing routes from the UI-documentation
+-->
+
+      <!--      <ul>-->
+<!--        <li>-->
+<!--          <a ui-sref="hello-world" ui-sref-active="active">Hello UI Router</a>-->
+<!--          <a ui-sref="about" ui-sref-active="active">About</a>-->
+<!--        </li>-->
+<!--      </ul>-->
+      <ui-view></ui-view>
+    </div>
+  </body>
+</html>
