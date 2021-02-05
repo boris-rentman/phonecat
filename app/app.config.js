@@ -10,25 +10,20 @@ angular.module("phonecatApp",["ui.router", "core.phone"])
                 url: '/',
                 component: 'phoneList',
                 resolve: {
-                    phones: function ($injector) {
-                        var PhoneService = $injector.get('Phone');
-
-                        return PhoneService.getAllPhones().then(function (response) {
+                    phones: function (Phone) {
+                        return Phone.getAllPhones().then(function (response) {
                             return response;
                         });
                     }
                 }
             },
-
             {
                 name: 'phoneList',
                 url: '/phones',
                 component: 'phoneList',
                 resolve: {
-                    phones: function ($injector) {
-                        var PhoneService = $injector.get('Phone');
-
-                        return PhoneService.getAllPhones().then(function (response) {
+                    phones: function (Phone) {
+                        return Phone.getAllPhones().then(function (response) {
                             return response;
                         });
                     }
@@ -40,10 +35,8 @@ angular.module("phonecatApp",["ui.router", "core.phone"])
                 url: '/phones/{phoneId}',
                 component: 'phoneDetail',
                 resolve: {
-                    phone: function ($transition$, $injector) {
-                        var PhoneService = $injector.get('Phone');
-
-                        return PhoneService.getPhoneById($transition$.params().phoneId).then(function (response) {
+                    phone: function ($transition$, Phone) {
+                        return Phone.getPhoneById($transition$.params().phoneId).then(function (response) {
                             return response;
                         });
                     }
